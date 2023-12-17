@@ -25,7 +25,7 @@ function Signup() {
     e.preventDefault();
   
     try {
-      const response = await fetch('https://admirable-llama-6aa9d1.netlify.app/signup', {
+      const response = await fetch('https://master--frolicking-cassata-ec2d6c.netlify.app/signup', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
