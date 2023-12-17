@@ -51,7 +51,7 @@ function Login() {
   return (
     <div className='d-flex justify-content-center align-items-center bg-primary vh-100'>
       <div className='bg-white p-3 rounded w-25'>
-        <h2>Log-Out</h2>
+        <h2>Log-In</h2>
         <form onSubmit={handleSubmit}>
           <div className='mb-3'>
             <label htmlFor='email'><strong>Email</strong></label>
