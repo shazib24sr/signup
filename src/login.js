@@ -23,7 +23,7 @@ function Login() {
     e.preventDefault();
   
     try {
-      const response = await fetch('http://localhost:3306/login', {
+      const response = await fetch('https://admirable-llama-6aa9d1.netlify.app/', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
