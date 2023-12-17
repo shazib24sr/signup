@@ -4,7 +4,7 @@ const bodyParser = require('body-parser');
 const mysql = require('mysql');
 
 const app = express();
-const PORT = process.env.PORT || 8081;
+const PORT = process.env.PORT || 3306;
 
 app.use(cors()); // Add this line to enable CORS
 app.use(bodyParser.json());
