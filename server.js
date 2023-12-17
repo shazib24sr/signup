@@ -12,9 +12,11 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Database connection
 const db = mysql.createConnection({
-  host: 'localhost',
-  user: 'root',
-  database: 'signup',
+  host: 'sql12.freemysqlhosting.net', // Update the host
+  user: 'sql12670999', // Update the username
+  password: 'rEYDlwaeNa', // Update the password
+  database: 'sql12670999', // Update the database name
+  port: 3306, // Update the port if necessary (default MySQL port is 3306)
 });
 
 db.connect((err) => {
