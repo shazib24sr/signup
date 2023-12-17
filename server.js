@@ -2,14 +2,18 @@ const express = require('express');
 const cors = require('cors');
 const bodyParser = require('body-parser');
 const mysql = require('mysql');
-
+const path = require('path');
 const app = express();
-const PORT = process.env.PORT || 8081;
+
+const PORT = process.env.PORT || 3306;
 
 app.use(cors()); // Add this line to enable CORS
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(express.static(path.join(__dirname, 'build')));
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
 // Database connection
 const db = mysql.createConnection({
   host: 'sql12.freemysqlhosting.net', // Update the host
@@ -65,7 +69,10 @@ app.post('/signup', (req, res) => {
       }
     });
   });
-  
+ 
+app.listen(PORT, () => {
+  console.log(`Server is running on port ${PORT}`);
+});
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
